@@ -21,11 +21,11 @@
 }
 
 .animated.animate-in:before {
-    background-color: #d4bd0d; /* Change in flow color here */    
+    background-color: #d4bd0d; /* Change in-flow color here */    
 }
 
 .animated.animate-in:after {
-    background-color: #202020; /* Change out flow color here */
+    background-color: #202020; /* Change out-flow color here */
     animation-delay: .5s;
 }
 
@@ -37,11 +37,11 @@
     animation: LtoRKeyframe 1s .6s ease;
 }
 
-.animated.animation-rtl.animate-in:before {
+.animated.animation-RtoL.animate-in:before {
     animation: RtoLKeyframe 1.8s ease;
 }
 
-.animated.animation-rtl.animate-in:after {
+.animated.animation-RtoL.animate-in:after {
     animation: RtoLKeyframe 1s .6s ease;
 }
 
