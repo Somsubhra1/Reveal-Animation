@@ -1,0 +1,88 @@
+.animated {
+    position: relative;
+}
+
+.animated * {
+    opacity: 0;
+}
+
+.animated.animate-in * {
+    animation: hideText 0.1s 1.1s forwards;
+}
+
+.animated.animate-in:before,
+.animated.animate-in:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 10;
+}
+
+.animated.animate-in:before {
+    background-color: #d4bd0d; /* Change in flow color here */    
+}
+
+.animated.animate-in:after {
+    background-color: #202020; /* Change out flow color here */
+    animation-delay: .5s;
+}
+
+.animated.animation-LtoR.animate-in:before {
+    animation: LtoRKeyframe 1.8s ease;
+}
+
+.animated.animation-LtoR.animate-in:after {
+    animation: LtoRKeyframe 1s .6s ease;
+}
+
+.animated.animation-rtl.animate-in:before {
+    animation: RtoLKeyframe 1.8s ease;
+}
+
+.animated.animation-rtl.animate-in:after {
+    animation: RtoLKeyframe 1s .6s ease;
+}
+
+@keyframes hideText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes LtoRKeyframe {
+    0% {
+        width: 0;
+        left: 0;
+    }
+    65% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes RtoLKeyframe {
+    0% {
+        width: 0;
+        right: 0;
+    }
+    65% {
+        width: 100%;
+        right: 0;
+    }
+    100% {
+        width: 0;
+        right: 100%;
+    }
+}
+
+
+

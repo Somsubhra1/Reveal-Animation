@@ -1,0 +1,17 @@
+.heading {
+    font-weight: 500;
+    display: block;
+    padding-bottom: 20px;
+    margin: 100px;
+    position: relative;
+}
+
+.text-content {
+    font-size: 1.2em;
+    padding-bottom: 20px;
+}
+
+
+.image {
+    margin-top: 10%;
+}
